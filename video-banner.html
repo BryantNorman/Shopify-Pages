@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Video Background</title>
+    <link rel="stylesheet" href="video-banner-styles.css" />
+    <!-- Icon-Library -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <style>
+      *,
+      ::before,
+      ::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      /* Global styles */
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        background: #f1f1f1;
+      }
+
+      /* Home and Video Banner CSS */
+      .home {
+        height: 100vh;
+      }
+
+      video {
+        object-fit: cover;
+        width: 100%;
+        height: auto;
+        z-index: 1;
+      }
+
+      .home-content {
+        background-color: red;
+        width: 60%;
+        margin: 0 auto;
+        position: relative;
+        top: 430px;
+        color: #fff;
+        z-index: 2;
+        padding: 35px 0;
+      }
+
+      .home-content h1 {
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: center;
+      }
+
+      .home-content button {
+        display: block;
+        border: 1px solid #f1f1f1;
+        background: rgb(0, 0, 0);
+        color: #fff;
+        margin: 30px auto 0;
+        padding: 16px 30px;
+        cursor: pointer;
+      }
+
+      .quote p {
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: center;
+        line-height: 1;
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="home">
+      <video autoplay muted loop>
+        <source src="https://cdn.shopify.com/videos/c/o/v/43f618b4f3ae428ea6e29d7670294362.mp4" type="video/mp4" />
+      </video>
+      <div class="home-content">
+        <h1>
+          Washable, Wipeable, Waterproof Menus That Last <br />
+          Buy Less, Use Longer <br />
+          Probably the toughest (Tuffest) menus in the world…
+        </h1>
+        <button>Get Your FREE Smaple</button>
+        <div class="quote">
+          <p>
+            <i
+              >“We can go through 500-600 covers a day so they get used and used
+              and used, we’ve never <br />
+              had to throw a SuperTuff Menu away. That’s unheard of in
+              hospitality.” <br />
+              <br />
+              Nina Fraser, Oak Tree Inn, Balmaha, Loch Lomond</i
+            >
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

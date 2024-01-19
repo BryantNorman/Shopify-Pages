@@ -1,0 +1,17 @@
+<div class="product-form__input">
+<label class="form__label">Upload</label>
+<input type="file" form="{{ 'product-form-' | append: section.id }}" name="properties[Your label]"
+">
+</div>
+
+
+
+
+<div class="product-form__input">
+    <label class="form__label">Upload</label>
+    <div class="custom-file-input">
+      <input type="file" form="{{ 'product-form-' | append: section.id }}" name="properties[Your label]" id="file-input" style="display: none;">
+      <label for="file-input" class="button-style">Upload</label>
+    </div>
+  </div>
+  

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page-1</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        .heading {
+            text-align: center;
+            width: 80%;
+            margin: auto;
+            font-size: 100px;
+            border: 2px solid black;
+        }
+
+        .content {
+            margin-top: 20px;
+            margin-left: 120px;
+            width: 80%;
+            display: flex;
+            justify-content: center;
+        }
+
+        .col-1 {
+            width: 20%;
+            height: auto;
+            font-size: 60px;
+        }
+
+        .col-2 {
+            width: 40%;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .offer {
+            margin-top: 30px;
+            width: 980px;
+            height: 130px;
+            display: flex;
+            flex-direction: row;
+            background-color: black;
+            color: white;
+            margin-right: 300px;
+        }
+
+        .social {
+            display: flex;
+            flex-direction: row;
+            margin-top: 40px;
+        }
+
+        .image {
+            object-fit: cover;
+            width: 80%;
+            height: auto;
+            margin: auto;
+            position: relative;
+        }
+
+        .text-block {
+            display: flex;
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+        }
+
+        /* Style all font awesome icons */
+        .fa {
+            padding: 20px;
+            font-size: 30px;
+            width: 30px;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 50%;
+        }
+
+        /* Add a hover effect if you want */
+        .fa:hover {
+            opacity: 0.7;
+        }
+
+        /* Set a specific color for each brand */
+
+        /* Facebook */
+        .fa-facebook {
+            background: #3B5998;
+            color: white;
+        }
+
+        /* Twitter */
+        .fa-twitter {
+            background: #55ACEE;
+            color: white;
+        }
+        @media (max-width: 1700px) {
+            .offer{
+                width:900px;
+            }
+        }
+        @media (max-width: 1600px) {
+            .offer{
+                width:840px;
+            }
+        }
+        @media (max-width: 1500px) {
+            .offer{
+                width:740px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="page" style="border: 2px solid black; padding: 20px; width: 80%; height: 1360px; margin: auto;">
+        <div class="invisible" style="position:absolute; left: 0px; right: 0px;">
+        <div class="heading">
+            <p style="margin-top: 0px; margin-bottom: 0px;"><i>Be yourself</i> your best version</p>
+        </div>
+        <div class="content" style="margin-top: 0px;">
+            <div class="col-1">
+                <ul>
+                    <li>FACIAL</li>
+                    <li>BODY</li>
+                    <li>OILS</li>
+                    <li>SCRUBS</li>
+                </ul>
+            </div>
+            <div class="col-2" style=" margin-left: 100px;">
+                <div class="offer" style=" margin-top: 100px;">
+                    <div style="width: 120px; height: auto; font-size:120px; margin-left: 40px;">
+                        <p style="margin-top: 0px; margin-bottom: 0px; margin-left: 30px;">25%</p>
+                    </div>
+                    <div style="width: 120px;height: auto;font-size: 55px;margin-left: 170px;">
+                        <p style="margin-top: 0px; margin-bottom: 0px; margin-left: 60px;">Launch<br> Offer</p>
+                    </div>
+                </div>
+                <div class="social" style="margin-left: 40px;">
+                    <a href="#" class="fa fa-facebook"></a>
+                    <a href="#" class="fa fa-twitter" style="margin-left: 20px;"></a>
+                    <p style="margin-left: 20px; margin-top: 20px; font-size: 30px; margin-bottom: 0px;">@
+                        NaturalCosmetic</p>
+                </div>
+            </div>
+        </div>
+        <div class="image">
+            <img src="/Assets/product-hunting-1024x576.jpg" style="width: 100%;"></img>
+            <div class="text-block">
+                <img src="/Assets/N-logo.jpg"
+                    style="width: 60px; height:auto; border: 1px solid black; margin-right: 10px;"></img>
+                <div style="display: flex; flex-direction: column;">
+                    <h4 style=" margin-top: 0px; margin-bottom: 0px; font-size: 26px;">NATURE</h4>
+                    <p style="margin-bottom: 0px;margin-top: 0px;font-size: 26px;"><i>Cosmetic</i></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</body>
+
+</html>

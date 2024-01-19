@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image With Text</title>
+</head>
+<body>
+    <div class="heading">
+  <h1>{{ section.settings.heading }}</h1>
+</div>
+<div class="main-container">
+  <div class="column-1">
+    <img src="Assets/STF Logo.jpg" alt="Image">
+  </div>
+  <div class="column-2">
+    <h3>{{ section.settings.col-heading }}</h3>
+    <p>{{ section.settings.paragraph }}</p>
+    <button>{{ section.settings.button }}
+        <a href="{{ section.settings.button_link }}">
+        {{ section.settings.button_label | escape }}
+        </a>
+        </button>
+  </div>
+</div>
+</body>
+</html>

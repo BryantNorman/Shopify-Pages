@@ -1,0 +1,183 @@
+*,
+::before,
+::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Global styles */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f1f1f1;
+}
+
+.announcement-bar {
+    color: #c41425;
+    text-align: center;
+    font-size: 15px;
+}
+
+/* Navigation-Bar CSS */
+nav {
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #c41425;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 3;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin-right: 500px;
+}
+
+nav ul li {
+    margin-right: 20px;
+    position: relative;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #c41425;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 10px 20px;
+    display: block;
+}
+
+/* Drop-Down CSS */
+nav ul ul {
+    display: none;
+    position: absolute;
+    background-color: #c41425;
+    list-style: none;
+    padding: 0;
+    top: 100%;
+    left: 0;
+    z-index: 1;
+}
+
+nav ul ul li {
+    width: 100%;
+}
+
+nav ul li:hover ul {
+    display: block;
+}
+
+nav ul ul li a {
+    color: #fff;
+    padding: 10px 20px;
+    display: block;
+    text-transform: none;
+}
+
+nav ul ul li a:hover {
+    background-color: #444;
+}
+
+/* Logo CSS */
+.logo {
+    height: 100px;
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 180px;
+}
+
+/* Nav-Icons CSS */
+.nav-icons {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 100px;
+}
+
+/* Navigation bar icons */
+.nav-icons a {
+    text-decoration: none;
+    color: #c41425;
+    font-size: 20px;
+    margin-right: 30px;
+}
+
+/* Home and Video Banner CSS */
+.home {
+    height: 100vh;
+}
+
+video {
+    object-fit: cover;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 1;
+}
+
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.home-content {
+    background-color: red;
+    width: 1300px;
+    margin: 0 auto;
+    position: relative;
+    top: 430px;
+    color: #fff;
+    z-index: 3;
+    padding: 35px 0;
+}
+
+.home-content h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 40px;
+    line-height: 1.1;
+}
+
+.home-content button {
+    display: block;
+    font-size: 20px;
+    border: 1px solid #f1f1f1;
+    background: rgb(0, 0, 0);
+    color: #fff;
+    margin: 30px auto 0;
+    padding: 16px 30px;
+    cursor: pointer;
+}
+
+.quote p {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    line-height: 1;
+    margin-top: 20px;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    .nav-icons {
+        margin-right: 0;
+    }
+}

@@ -1,0 +1,130 @@
+<style>
+    *,
+    ::before,
+    ::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    /* Global styles */
+    body {
+        background: #f1f1f1;
+    }
+
+    /* Home and Video Banner CSS */
+    .home {
+        height: 100vh;
+    }
+
+    video {
+        object-fit: cover;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        z-index: 1;
+    }
+
+    .overlay {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: 2;
+        background: rgba(0, 0, 0, 0.6);
+    }
+
+    .home-content {
+        background-color: red;
+        width: 1100px;
+        margin: 0 auto;
+        position: relative;
+        top: 430px;
+        color: #fff;
+        z-index: 3;
+        padding: 35px 0;
+    }
+
+    .home-content .p1 {
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 50px;
+        line-height: 1.1;
+        color: white;
+    }
+
+    .home-content button {
+        display: block;
+        font-size: 20px;
+        border: 1px solid #f1f1f1;
+        background: rgb(0, 0, 0);
+        color: #fff;
+        margin: 30px auto 0;
+        padding: 16px 30px;
+        cursor: pointer;
+    }
+
+    .quote p {
+        text-align: center;
+        line-height:0;
+        margin-top: 20px;
+    }
+</style>
+
+<div class="home">
+    <video autoplay="" muted="" loop="">
+        <source src="{{ section.settings.video1 }}" type="video/mp4">
+    </video>
+    <!-- <div class="overlay"></div> -->
+    <div class="home-content">
+        <p class="p1">{{ section.settings.heading1 }}</p>
+        <button>{{ section.settings.button1 }}</button>
+        <div class="quote">
+            <p><i>{{ section.settings.richtext2 }}</i></p>
+        </div>
+    </div>
+</div>
+
+{% schema %}
+{
+    "name": "header-banner",
+    "settings": [
+        {
+            "type": "richtext",
+            "id": "heading1",
+            "label": "Heading 1",
+            "default": "<p>Washable, Wipeable, Waterproof Menus That Last Buy Less, Use Longer Probably the toughest (Tuffest) menus in the world…</p>"
+        },
+        {
+            "type": "richtext",
+            "id": "richtext2",
+            "label": "Richtext 2",
+            "default": "<p>“We can go through 500-600 covers a day so they get used and used\n              and used, we’ve never \n              had to throw a SuperTuff Menu away. That’s unheard of in\n              hospitality.” \n              \n              Nina Fraser, Oak Tree Inn, Balmaha, Loch Lomond</p>"
+        },
+        {
+            "type": "text",
+            "id": "button1",
+            "label": "Button 1",
+            "default": "Get Your FREE Smaple"
+        },
+        {
+            "type": "url",
+            "id": "button_link",
+            "label": {
+            "en": "Button link"
+            }
+        },
+        {
+            "type": "text",
+            "id": "video1",
+            "label": "Video 1",
+            "default": "https://cdn.shopify.com/videos/c/o/v/43f618b4f3ae428ea6e29d7670294362.mp4"
+        }
+    ],
+    "presets": [
+        {
+            "name": "header-banner"
+        }
+    ]
+}
+{% endschema %}

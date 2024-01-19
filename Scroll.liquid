@@ -1,0 +1,166 @@
+<style>
+    *,
+    *::after,
+    *::before {
+        margin: 0;
+        padding: 0;
+        border: none;
+        outline: none;
+        box-sizing: border-box;
+    }
+
+    html {
+        font-size: 10px;
+    }
+
+    .scroll-parent {
+        position: relative;
+        width: 100vw;
+        height: 20rem;
+        padding: 2rem 0;
+        overflow-x: hidden;
+    }
+
+    .scroll-element {
+        width: inherit;
+        height: inherit;
+        position: absolute;
+        left: 0%;
+        top: 0%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .scroll-element img {
+        width: 10%;
+    }
+
+    .primary {
+        animation: primary 10s linear infinite;
+    }
+
+    .secondary {
+        animation: secondary 10s linear infinite;
+    }
+
+    @keyframes primary {
+        from {
+            left: 0%;
+        }
+        to {
+            left: -100%;
+        }
+    }
+
+    @keyframes secondary {
+        from {
+            left: 100%;
+        }
+        to {
+            left: 0%;
+        }
+    }
+</style>
+
+<div class="container">
+    <div class="scroll-parent">
+        <div class="scroll-element primary">
+            {% if section.settings.image1 != blank -%}
+                {{- section.settings.image1 | image_url:  | image_tag: class: '', loading: 'lazy' -}}
+            {%- endif %}
+            {% if section.settings.image2 != blank -%}
+                {{- section.settings.image2 | image_url:  | image_tag: class: '', loading: 'lazy' -}}
+            {%- endif %}
+            {% if section.settings.image3 != blank -%}
+                {{- section.settings.image3 | image_url:  | image_tag: class: '', loading: 'lazy' -}}
+            {%- endif %}
+            {% if section.settings.image4 != blank -%}
+                {{- section.settings.image4 | image_url:  | image_tag: class: '', loading: 'lazy' -}}
+            {%- endif %}
+            {% if section.settings.image5 != blank -%}
+                {{- section.settings.image5 | image_url:  | image_tag: class: '', loading: 'lazy' -}}
+            {%- endif %}
+        </div>
+        <div class="scroll-element secondary">
+            {% if section.settings.image6 != blank -%}
+                {{- section.settings.image6 | image_url:  | image_tag: class: '', loading: 'lazy' -}}
+            {%- endif %}
+            {% if section.settings.image7 != blank -%}
+                {{- section.settings.image7 | image_url:  | image_tag: class: '', loading: 'lazy' -}}
+            {%- endif %}
+            {% if section.settings.image8 != blank -%}
+                {{- section.settings.image8 | image_url:  | image_tag: class: '', loading: 'lazy' -}}
+            {%- endif %}
+            {% if section.settings.image9 != blank -%}
+                {{- section.settings.image9 | image_url:  | image_tag: class: '', loading: 'lazy' -}}
+            {%- endif %}
+            {% if section.settings.image10 != blank -%}
+                {{- section.settings.image10 | image_url:  | image_tag: class: '', loading: 'lazy' -}}
+            {%- endif %}
+        </div>
+    </div>
+</div>
+
+{% schema %}
+{
+    "name": "Scroll",
+    "settings": [
+        {
+            "type": "image_picker",
+            "id": "image1",
+            "label": "Image 1"
+        },
+        {
+            "type": "image_picker",
+            "id": "image2",
+            "label": "Image 2"
+        },
+        {
+            "type": "image_picker",
+            "id": "image3",
+            "label": "Image 3"
+        },
+        {
+            "type": "image_picker",
+            "id": "image4",
+            "label": "Image 4"
+        },
+        {
+            "type": "image_picker",
+            "id": "image5",
+            "label": "Image 5"
+        },
+        {
+            "type": "image_picker",
+            "id": "image6",
+            "label": "Image 6"
+        },
+        {
+            "type": "image_picker",
+            "id": "image7",
+            "label": "Image 7"
+        },
+        {
+            "type": "image_picker",
+            "id": "image8",
+            "label": "Image 8"
+        },
+        {
+            "type": "image_picker",
+            "id": "image9",
+            "label": "Image 9"
+        },
+        {
+            "type": "image_picker",
+            "id": "image10",
+            "label": "Image 10"
+        }
+    ],
+    "presets": [
+        {
+            "name": "Scroll"
+        }
+    ]
+}
+{% endschema %}

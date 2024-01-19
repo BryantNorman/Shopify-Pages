@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dropdown Price Calculator</title>
+    <style>
+      .checkout {
+        height: 300px;
+        width: 400px;
+        margin: 20px auto;
+        border: 2px solid black;
+        text-align: center;
+      }
+      .quantity {
+        width: 100px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="checkout">
+      <h1 class="title">Checkout</h1>
+      <p class="price" data-price="1">$1 per Juice</p>
+      <p class="description">Quantity:</p>
+      <select class="quantity">
+        <option value="1">1</option>
+        <option value="10">10</option>
+        <option value="30">30</option>
+        <option value="50">50</option>
+      </select>
+
+      <p class="total">Total: <span id="total">$1</span></p>
+
+      <button class="btn">Submit Order</button>
+    </div>
+
+    <!-- Include jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        // Define specific discounts for quantities
+        var discounts = {
+          10: 1, // $1 discount for 10 juices
+          30: 5, // $5 discount for 30 juices
+          50: 10, // $10 discount for 50 juices
+        };
+
+        $(".checkout").on("change", ".quantity", function () {
+          var pricePerJuice = +$(".price").data("price");
+          var quantity = +$(this).val();
+          var total = 0;
+
+          // Calculate the total price with discounts
+          if (quantity in discounts) {
+            var discountAmount = discounts[quantity];
+            total = quantity * pricePerJuice - discountAmount;
+          } else {
+            total = quantity * pricePerJuice;
+          }
+
+          // Display the updated total
+          $("#total").text("$" + total.toFixed(2));
+        });
+      });
+    </script>
+  </body>
+</html>

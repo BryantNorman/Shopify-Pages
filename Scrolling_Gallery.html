@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Auto Scroll Animation</title>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <style>
+      *,
+      *::after,
+      *::before {
+        margin: 0;
+        padding: 0;
+        border: none;
+        outline: none;
+        box-sizing: border-box;
+      }
+
+      html {
+        font-size: 10px;
+      }
+
+      .scroll-parent {
+        position: relative;
+        width: 100vw;
+        height: 20rem;
+        padding: 2rem 0;
+        overflow-x: hidden;
+      }
+
+      .scroll-element {
+        width: inherit;
+        height: inherit;
+        position: absolute;
+        left: 0%;
+        top: 0%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+      }
+
+      .scroll-element img {
+        width: 10%;
+      }
+
+      .primary {
+        animation: primary 10s linear infinite;
+      }
+
+      .secondary {
+        animation: secondary 10s linear infinite;
+      }
+
+      @keyframes primary {
+        from {
+          left: 0%;
+        }
+        to {
+          left: -100%;
+        }
+      }
+
+      @keyframes secondary {
+        from {
+          left: 100%;
+        }
+        to {
+          left: 0%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="scroll-parent">
+        <div class="scroll-element primary">
+          <img
+            src="https://cdn.shopify.com/s/files/1/0585/9790/0339/files/SM-placeholder.png?v=1703759606"
+          />
+          <img
+            src="https://cdn.shopify.com/s/files/1/0585/9790/0339/files/SM-placeholder.png?v=1703759606"
+          />
+          <img
+            src="https://cdn.shopify.com/s/files/1/0585/9790/0339/files/SM-placeholder.png?v=1703759606"
+          />
+          <img
+            src="https://cdn.shopify.com/s/files/1/0585/9790/0339/files/SM-placeholder.png?v=1703759606"
+          />
+          <img
+            src="https://cdn.shopify.com/s/files/1/0585/9790/0339/files/SM-placeholder.png?v=1703759606"
+          />
+        </div>
+        <div class="scroll-element secondary">
+          <img
+            src="https://cdn.shopify.com/s/files/1/0585/9790/0339/files/SM-placeholder.png?v=1703759606"
+          />
+          <img
+            src="https://cdn.shopify.com/s/files/1/0585/9790/0339/files/SM-placeholder.png?v=1703759606"
+          />
+          <img
+            src="https://cdn.shopify.com/s/files/1/0585/9790/0339/files/SM-placeholder.png?v=1703759606"
+          />
+          <img
+            src="https://cdn.shopify.com/s/files/1/0585/9790/0339/files/SM-placeholder.png?v=1703759606"
+          />
+          <img
+            src="https://cdn.shopify.com/s/files/1/0585/9790/0339/files/SM-placeholder.png?v=1703759606"
+          />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

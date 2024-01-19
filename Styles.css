@@ -1,0 +1,242 @@
+/* Reset some default styles for better consistency */
+body, h1, h2, p, ul, li, video {
+    margin: 0;
+    padding: 0;
+}
+
+/* Apply a base font size and set background color */
+body {
+    font-family: 'DIN Next', sans-serif;
+    font-size: 16px;
+    background-color: #F0FAFE;
+}
+
+/* Center the header and sections vertically and horizontally */
+header, section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 40px;
+}
+
+/* Style the header */
+header {
+    background-color: #F0FAFE;
+    color: #C41425;
+}
+
+/* Style headings and paragraphs */
+h1, h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+    font-family: 'Shadowintolight', sans-serif;
+}
+h2{
+    color: #C41425;
+}
+
+p {
+    color: #C41425;
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    font-family: 'DIN Next', sans-serif;
+}
+
+/* Center buttons */
+button {
+    background-color: #99DBF9;
+    color: #C41425;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    font-family: 'DIN Next', sans-serif;
+    font-weight: bold;
+}
+
+/* Style the top-level navigation bar */
+nav {
+    background-color: #F0FAFE;
+    color: #C41425;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin-right: 20px;
+    position: relative;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #C41425;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 10px 20px;
+    display: block;
+}
+
+/* Style the dropdown menus */
+nav ul ul {
+    display: none;
+    position: absolute;
+    background-color: #C41425;
+    list-style: none;
+    padding: 0;
+    top: 100%;
+    left: 0;
+    z-index: 1;
+}
+
+nav ul ul li {
+    width: 100%;
+}
+
+nav ul li:hover ul {
+    display: block;
+}
+
+nav ul ul li a {
+    color: #fff;
+    padding: 10px 20px;
+    display: block;
+    text-transform: none;
+}
+
+nav ul ul li a:hover {
+    background-color: #444;
+}
+
+/* Make the navigation bar responsive */
+@media (max-width: 768px) {
+    nav ul li {
+        display: block;
+        margin-bottom: 10px;
+    }
+}
+
+/* Style tables */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+}
+
+/* Style gallery images */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.gallery img {
+    margin: 30px;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Style footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.footer-left, .footer-right {
+    flex-basis: calc(50% - 20px);
+    margin-bottom: 20px;
+}
+
+.footer-left p, .footer-right a {
+    font-size: 1em;
+}
+
+.footer-bottom {
+    background-color: #222;
+    padding: 10px 0;
+    font-size: 0.8em;
+}
+
+/* Style the video container with full screen width and section height */
+.section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Style the video element */
+.video-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Style the overlay content */
+.overlay-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(196, 20, 37, 0.7);
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    z-index: 2;
+}
+
+.overlay-content h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.overlay-content p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.overlay-content button {
+    background-color: #99DBF9;
+    color: #C41425;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    font-family: 'DIN Next', sans-serif;
+    font-weight: bold;
+}
+
+/* Your additional CSS styles go here */

@@ -1,0 +1,126 @@
+<style>
+    .heading{
+      text-align: center;
+      margin-bottom : 0;
+      font-size : clamp(15px, 5vw, 45px);
+    }
+    .main-container{
+      width : 100%;
+      height : 100%;
+      display : grid;
+      gap : 12px;
+      padding : 10px 50px 50px;
+      position : relative;
+      grid-template-columns : repeat(6, 1fr);
+      grid-template-rows : repeat(3, 15vw);
+      grid-template-areas : "a a b b c d"
+                            "e f b b g g"
+                            "h f i j j k"
+                            "l l m m n o"
+                            "p q m m r r"
+                            "s q t u u v"
+                            "w w x x y z"
+                            "a1 a2 x x a3 a3"
+                            "a4 a2 a5 a6 a6 a7";
+    }
+    .collage-image {
+      width : 100%;
+      height : 100%;
+      object-fit : cover;
+      border-radius : 4px;
+    }
+    /* .image-block:hover .collage-image{
+      position : absolute;
+      width : 40%;
+      height : auto;
+      inset : 0;
+      margin : auto;
+      border : 12px solid #EEF5FF;
+      box-shadow : 0 0 50px crimson;
+    }   */
+    @media only screen and (max-width: 600px){
+      .main-container{
+        gap : 4px;
+      }
+      /* .image-block:hover .collage-image{
+      border : 4px solid #EEF5FF;
+      } */
+    }
+  </style>
+  
+  <h1 class = "heading">{{ section.settings.heading }}</h1>
+  
+  <div class="main-container">
+    {% for blocks in section.blocks %}
+    <div class="image-block" style = "grid-area:
+      {% case forloop.index %}
+        {% when 1 %} a
+        {% when 2 %} b
+        {% when 3 %} c
+        {% when 4 %} d
+        {% when 5 %} e
+        {% when 6 %} f
+        {% when 7 %} g
+        {% when 8 %} h
+        {% when 9 %} i
+        {% when 10 %} j
+        {% when 11 %} k
+        {% when 12 %} l
+        {% when 13 %} m
+        {% when 14 %} n
+        {% when 15 %} o
+        {% when 16 %} p
+        {% when 17 %} q
+        {% when 18 %} r
+        {% when 19 %} s
+        {% when 20 %} t
+        {% when 21 %} u
+        {% when 22 %} v
+        {% when 23 %} w
+        {% when 24 %} x
+        {% when 25 %} y
+        {% when 26 %} z
+        {% when 27 %} a1
+        {% when 28 %} a2
+        {% when 29 %} a3
+        {% when 30 %} a4
+        {% when 31 %} a5
+        {% when 32 %} a6
+        {% when 33 %} a7
+        {% endcase %}">
+        <img class="collage-image" src="{{ blocks.settings.collage_image | img_url: 'large' }}">
+    </div>
+    {% endfor %}
+  </div>
+  
+  {% schema %}
+    {
+      "name" : "Image-Gallery",
+      "settings": [
+        {
+          "type" : "richtext",
+          "id" : "heading",
+          "label" : "Heading"
+        }
+      ],
+      "max_blocks" : 33,
+      "blocks" :[
+        {
+          "name":"collage_image",
+          "type": "collage_image",
+          "settings": [
+            {
+              "type" : "image_picker",
+              "id" : "collage_image",
+              "label" : "Collage Image"
+            }
+          ]
+        }
+      ],
+      "presets": [
+        {
+          "name": "Image-Gallery"
+        }
+      ]
+    }
+  {% endschema %}
